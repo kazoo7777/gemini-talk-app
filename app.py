@@ -203,6 +203,12 @@ def page_debate():
 
     # Auto-Debate Logic
     if st.session_state.is_debating:
+        # Stop button - checked before each API call (between turns)
+        if st.button("🛑 議論を中断", use_container_width=True):
+            st.session_state.is_debating = False
+            st.session_state.debate_finished = True
+            st.rerun()
+
         # Count turns since the last debate start point
         turns_since_start = len(st.session_state.chat_history) - 1 - st.session_state.current_round_start
         max_turns = st.session_state.max_rounds * 2
