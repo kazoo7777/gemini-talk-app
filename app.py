@@ -64,7 +64,7 @@ except Exception as e:
 AVAILABLE_MODELS = {
     "Gemini 2.5 Flash": "gemini-2.5-flash",
     "Gemini 2.5 Pro": "gemini-2.5-pro",
-    "Gemini 3 Flash": "gemini-3-flash",
+    "Gemini 3 Flash (Preview)": "gemini-3-flash-preview",
 }
 AVAILABLE_MODEL_NAMES = list(AVAILABLE_MODELS.keys())
 DEFAULT_MODEL_LABEL = "Gemini 2.5 Flash"
